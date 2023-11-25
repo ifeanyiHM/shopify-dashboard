@@ -253,6 +253,7 @@ main .trial-extension a {
   border-radius: 6px;
   color: #323232;
   outline: none;
+  font-weight: 600;
 }
 main .trial-extension a:focus {
   border: 1px solid #005bd3;
@@ -413,6 +414,7 @@ main .store-setup .one .two .content-body .action-btn {
   margin-bottom: 0.75rem;
   color: #f6f3f6;
   font-size: 0.75rem;
+  font-weight: 600;
   cursor: pointer;
   outline: none;
 }
