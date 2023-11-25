@@ -440,38 +440,17 @@ main {
                 transition: all 0.4s 0.5s;
               }
 
-              .img-checked {
-                opacity: 1;
-                transition: all 0.4s 0.5s;
-              }
-
               &:hover .divv,
               &:active .divv,
               &:focus .divv {
                 border-style: solid;
               }
-
-              // &:focus img {
-              //   opacity: 1;
-              // }
-
-              // &:focus .divv {
-              //   border-right: 0;
-              //   border-style: solid;
-              //   border-color: #303030;
-              //   animation: rotate 1s 2 linear;
-              // }
-
-              // @keyframes rotate {
-              //   to {
-              //     transform: rotate(1turn);
-              //   }
-              // }
             }
 
-            .but {
+            .btn-checked {
               img {
                 opacity: 1;
+                transition: all 0.4s 0.5s;
               }
 
               .divv {
@@ -538,8 +517,8 @@ main {
             display: block;
           }
 
-          span {
-            font-size: 0.45rem;
+          .import {
+            font-size: 0.75rem;
             color: #323232;
             font-weight: 600;
           }

@@ -110,8 +110,6 @@ updateStoreButtons.forEach((button) => {
 
       button.setAttribute("data-clicked", "true");
     }
-
-    const imgElement = button.parentElement.querySelector("div.divv + img");
-    imgElement.classList.add("img-checked");
+    button.classList.add("btn-checked");
   });
 });

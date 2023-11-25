@@ -373,17 +373,14 @@ main .store-setup .one .two .content-body .header button img {
   opacity: 0;
   transition: all 0.4s 0.5s;
 }
-main .store-setup .one .two .content-body .header button .img-checked {
-  opacity: 1;
-  transition: all 0.4s 0.5s;
-}
 main .store-setup .one .two .content-body .header button:hover .divv, main .store-setup .one .two .content-body .header button:active .divv, main .store-setup .one .two .content-body .header button:focus .divv {
   border-style: solid;
 }
-main .store-setup .one .two .content-body .header .but img {
+main .store-setup .one .two .content-body .header .btn-checked img {
   opacity: 1;
+  transition: all 0.4s 0.5s;
 }
-main .store-setup .one .two .content-body .header .but .divv {
+main .store-setup .one .two .content-body .header .btn-checked .divv {
   border-right: 0;
   border-style: solid;
   border-color: #303030;
@@ -434,8 +431,8 @@ main .store-setup .one .two .content-body .cl-menu {
 main .store-setup .one .two .content-body .show-menu {
   display: block;
 }
-main .store-setup .one .two .content-body span {
-  font-size: 0.45rem;
+main .store-setup .one .two .content-body .import {
+  font-size: 0.75rem;
   color: #323232;
   font-weight: 600;
 }
