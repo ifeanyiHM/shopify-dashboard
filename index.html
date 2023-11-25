@@ -13,6 +13,7 @@
   </head>
   <body>
     <header>
+      <a href="#main" class="skip-link">Skip to Main Content</a>
       <img
         class="m-logo"
         src="https://crushingit.tech/hackathon-assets/shopify-icon.svg"
@@ -29,9 +30,12 @@
           alt="search"
         />
 
-        <label for="search">
-          <input id="search" type="text" placeholder="Search" />
-        </label>
+        <input
+          id="search"
+          type="text"
+          placeholder="Search"
+          aria-label="Search"
+        />
       </div>
       <div class="notification">
         <div
@@ -80,47 +84,49 @@
           <span>DC</span>
         </button>
       </div>
+
+      <nav role="navigation" id="navigation-menu" aria-labelledby="toggle-menu">
+        <ul>
+          <li class="user-p">
+            <a href="#">
+              <span class="user-SP">
+                <span>DC</span>
+                <span>Davii collections</span>
+              </span>
+              &#10003;
+            </a>
+          </li>
+          <li class="store">
+            <a href="#">
+              <img
+                src="https://crushingit.tech/hackathon-assets/icon-store.svg"
+                alt="store"
+              />
+              <span>All stores</span>
+            </a>
+          </li>
+          <li class="center">
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Changelog</a></li>
+              <li><a href="#">Community forums</a></li>
+              <li><a href="#">Hire a Shopify Partner</a></li>
+              <li><a href="#">Keyboard shortcuts</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              <span>David Micheal</span><br />
+              <span>davidmicheal@gmail.com</span>
+            </a>
+          </li>
+          <li><a href="#">Manage account</a></li>
+          <li><a href="#">Log out</a></li>
+        </ul>
+      </nav>
     </header>
-    <nav role="navigation" id="navigation-menu" aria-labelledby="toggle-menu">
-      <ul>
-        <li class="user-p">
-          <a href="#">
-            <span class="user-SP">
-              <span>DC</span>
-              <span>Davii collections</span>
-            </span>
-            &#10003;
-          </a>
-        </li>
-        <li class="store">
-          <a href="#">
-            <img
-              src="https://crushingit.tech/hackathon-assets/icon-store.svg"
-              alt="store"
-            />
-            <span>All stores</span>
-          </a>
-        </li>
-        <li class="center">
-          <ul>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Changelog</a></li>
-            <li><a href="#">Community forums</a></li>
-            <li><a href="#">Hire a Shopify Partner</a></li>
-            <li><a href="#">Keyboard shortcuts</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">
-            <span>David Micheal</span><br />
-            <span>davidmicheal@gmail.com</span>
-          </a>
-        </li>
-        <li><a href="#">Manage account</a></li>
-        <li><a href="#">Log out</a></li>
-      </ul>
-    </nav>
-    <main>
+
+    <main id="main">
       <section class="trial-extension">
         <p>Extend your trial for $1/month for 3 months on select plans.</p>
         <a role="button" href="#">Select a plan</a>
