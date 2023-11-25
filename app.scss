@@ -76,42 +76,6 @@ header {
           brightness(98%) contrast(89%);
       }
 
-      .notf {
-        position: fixed;
-        background: #fff;
-        right: 1rem;
-        top: 4.9rem;
-        width: calc(100% - 2rem);
-        border-radius: 14px;
-        border: 1px solid #dbdbdb;
-        box-shadow: 0px 4px 8px 0px #0000000d;
-        padding: 1rem;
-        font-size: 0.875rem;
-        display: none;
-        z-index: 5;
-
-        div {
-          display: flex;
-          justify-content: space-between;
-
-          .icons {
-            gap: 1rem;
-          }
-        }
-
-        p {
-          font-size: 0.813rem;
-          text-align: center;
-          padding: 1rem;
-          background: #f1f1f1;
-          margin-top: 1rem;
-        }
-      }
-
-      .open {
-        display: block;
-      }
-
       &:hover,
       &:active {
         background: #656266;
@@ -120,6 +84,42 @@ header {
       &:focus {
         box-shadow: 0px 0px 0px 3px #005bd3;
       }
+    }
+
+    .notf {
+      position: fixed;
+      background: #fff;
+      right: 1rem;
+      top: 4.9rem;
+      width: calc(100% - 2rem);
+      border-radius: 14px;
+      border: 1px solid #dbdbdb;
+      box-shadow: 0px 4px 8px 0px #0000000d;
+      padding: 1rem;
+      font-size: 0.875rem;
+      display: none;
+      z-index: 5;
+
+      div {
+        display: flex;
+        justify-content: space-between;
+
+        .icons {
+          gap: 1rem;
+        }
+      }
+
+      p {
+        font-size: 0.813rem;
+        text-align: center;
+        padding: 1rem;
+        background: #f1f1f1;
+        margin-top: 1rem;
+      }
+    }
+
+    .open {
+      display: block;
     }
 
     .user {
@@ -316,7 +316,7 @@ main {
     height: 26.4rem;
     transition: all 0.3s;
 
-    h3 {
+    h1 {
       font-size: 0.875rem;
       padding: 0 1rem;
     }
@@ -395,7 +395,7 @@ main {
             gap: 0.5rem;
             cursor: pointer;
 
-            h4 {
+            h2 {
               font-size: 0.813rem;
               font-weight: 500;
               color: #303030;
@@ -561,10 +561,10 @@ main {
         background: #303030;
         border-radius: 8px;
         padding: 0.4rem;
+      }
 
-        .notf {
-          width: 24rem;
-        }
+      .notf {
+        width: 24rem;
       }
 
       .user {

@@ -69,7 +69,13 @@ header .notification .bell-notf {
 header .notification .bell-notf img {
   filter: invert(75%) sepia(0%) saturate(1080%) hue-rotate(231deg) brightness(98%) contrast(89%);
 }
-header .notification .bell-notf .notf {
+header .notification .bell-notf:hover, header .notification .bell-notf:active {
+  background: #656266;
+}
+header .notification .bell-notf:focus {
+  box-shadow: 0px 0px 0px 3px #005bd3;
+}
+header .notification .notf {
   position: fixed;
   background: #fff;
   right: 1rem;
@@ -83,28 +89,22 @@ header .notification .bell-notf .notf {
   display: none;
   z-index: 5;
 }
-header .notification .bell-notf .notf div {
+header .notification .notf div {
   display: flex;
   justify-content: space-between;
 }
-header .notification .bell-notf .notf div .icons {
+header .notification .notf div .icons {
   gap: 1rem;
 }
-header .notification .bell-notf .notf p {
+header .notification .notf p {
   font-size: 0.813rem;
   text-align: center;
   padding: 1rem;
   background: #f1f1f1;
   margin-top: 1rem;
 }
-header .notification .bell-notf .open {
+header .notification .open {
   display: block;
-}
-header .notification .bell-notf:hover, header .notification .bell-notf:active {
-  background: #656266;
-}
-header .notification .bell-notf:focus {
-  box-shadow: 0px 0px 0px 3px #005bd3;
 }
 header .notification .user {
   cursor: pointer;
@@ -268,7 +268,7 @@ main .store-setup {
   height: 26.4rem;
   transition: all 0.3s;
 }
-main .store-setup h3 {
+main .store-setup h1 {
   font-size: 0.875rem;
   padding: 0 1rem;
 }
@@ -334,7 +334,7 @@ main .store-setup .one .two .content-body .header {
   gap: 0.5rem;
   cursor: pointer;
 }
-main .store-setup .one .two .content-body .header h4 {
+main .store-setup .one .two .content-body .header h2 {
   font-size: 0.813rem;
   font-weight: 500;
   color: #303030;
@@ -447,7 +447,7 @@ main .store-setup .one .cl {
     border-radius: 8px;
     padding: 0.4rem;
   }
-  header .notification .bell-notf .notf {
+  header .notification .notf {
     width: 24rem;
   }
   header .notification .user {

@@ -34,28 +34,40 @@
         </label>
       </div>
       <div class="notification">
-        <div class="bell-notf" tabindex="0">
+        <div
+          role="button"
+          class="bell-notf"
+          tabindex="0"
+          id="toggle-notf"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-controls="notif-menu"
+        >
           <img
             src="https://crushingit.tech/hackathon-assets/icon-bell.svg"
             alt="notification"
           />
-
-          <div class="notf">
-            <div>
-              <span>Alerts</span>
-              <div class="icons">
-                <img
-                  src="https://crushingit.tech/hackathon-assets/icon-filter.svg"
-                  alt="sound"
-                />
-                <img
-                  src="https://crushingit.tech/hackathon-assets/icon-check-empty-circle.svg"
-                  alt="mark"
-                />
-              </div>
+        </div>
+        <div
+          class="notf"
+          role="notification"
+          id="notif-menu"
+          aria-labelledby="toggle-notf"
+        >
+          <div>
+            <span>Alerts</span>
+            <div class="icons">
+              <img
+                src="https://crushingit.tech/hackathon-assets/icon-filter.svg"
+                alt="sound"
+              />
+              <img
+                src="https://crushingit.tech/hackathon-assets/icon-check-empty-circle.svg"
+                alt="mark"
+              />
             </div>
-            <p>Alerts about your store and account will show here</p>
           </div>
+          <p>Alerts about your store and account will show here</p>
         </div>
         <button
           class="user"
@@ -111,7 +123,7 @@
     <main>
       <section class="trial-extension">
         <p>Extend your trial for $1/month for 3 months on select plans.</p>
-        <a href="#">Select a plan</a>
+        <a role="button" href="#">Select a plan</a>
         <button>
           <img
             class="close-trial"
@@ -122,7 +134,7 @@
       </section>
 
       <section class="store-setup">
-        <h3>Setup guide</h3>
+        <h1>Setup guide</h1>
         <button class="open-menu">
           <img
             class="angle-toggle_icon"
@@ -152,7 +164,7 @@
                     alt="radio button clicked"
                   />
                 </button>
-                <h4>Customize your online store</h4>
+                <h2>Customize your online store</h2>
               </div>
               <div class="cl-menu show-menu">
                 <p>
@@ -161,6 +173,7 @@
                   <a
                     href="https://help.shopify.com/en/manual/online-store/themes/customizing-themes"
                     target="_blank"
+                    aria-label="Learn more"
                     >Learn more</a
                   >
                 </p>
@@ -184,7 +197,7 @@
                     alt="radio button clicked"
                   />
                 </button>
-                <h4>Add your first product</h4>
+                <h2>Add your first product</h2>
               </div>
               <div class="cl-menu">
                 <p>
@@ -193,6 +206,7 @@
                   <a
                     href="https://help.shopify.com/en/manual/products/add-update-products"
                     target="_blank"
+                    aria-label="Learn more"
                     >Learn more</a
                   >
                 </p>
@@ -217,7 +231,7 @@
                     alt="radio button clicked"
                   />
                 </button>
-                <h4>Add a custom domain</h4>
+                <h2>Add a custom domain</h2>
               </div>
               <div class="cl-menu">
                 <p>
@@ -225,6 +239,7 @@
                   custom domain to help customers find your online store.<a
                     href="https://help.shopify.com/en/manual/domains"
                     target="_blank"
+                    aria-label="Learn more"
                     >Learn more</a
                   >
                 </p>
@@ -248,7 +263,7 @@
                     alt="radio button clicked"
                   />
                 </button>
-                <h4>Name your store</h4>
+                <h2>Name your store</h2>
               </div>
               <div class="cl-menu">
                 <p>
@@ -257,6 +272,7 @@
                   more<a
                     href="https://help.shopify.com/en/manual/intro-to-shopify/initial-setup/setup-business-settings#set-or-change-your-online-store-name-and-legal-business-name"
                     target="_blank"
+                    aria-label="Learn more"
                     >Learn more</a
                   >
                 </p>
@@ -280,7 +296,7 @@
                     alt="radio button clicked"
                   />
                 </button>
-                <h4>Setup a payment provider</h4>
+                <h2>Setup a payment provider</h2>
               </div>
               <div class="cl-menu">
                 <p>
@@ -290,6 +306,7 @@
                   <a
                     href="https://help.shopify.com/en/manual/payments"
                     target="_blank"
+                    aria-label="Learn more"
                     >Learn more</a
                   >
                 </p>
