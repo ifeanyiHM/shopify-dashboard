@@ -81,13 +81,13 @@ header {
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
-    cursor: pointer;
 
     .bell-notf {
       border-radius: 8px;
       padding: 0.4rem;
       transition: all 0.3s;
       outline: none;
+      cursor: pointer;
 
       img {
         filter: invert(75%) sepia(0%) saturate(1080%) hue-rotate(231deg)
@@ -124,6 +124,11 @@ header {
 
         .icons {
           gap: 1rem;
+
+          img {
+            filter: invert(37%) sepia(0%) saturate(5%) hue-rotate(93deg)
+              brightness(98%) contrast(90%);
+          }
         }
       }
 
@@ -149,6 +154,7 @@ header {
       border: 1px solid #656266;
       background: #36fba1;
       outline: none;
+      cursor: pointer;
 
       span:first-child {
         display: none;

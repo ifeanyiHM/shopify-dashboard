@@ -1,7 +1,7 @@
 const userButton = document.querySelector("#toggle-menu");
 const navElement = document.querySelector("#navigation-menu");
 const bellIcon = document.querySelector(".bell-notf");
-const alertBox = document.querySelector(".notf");
+const alertBox = document.querySelector("#notif-menu");
 const trialExtension = document.querySelector(".trial-extension");
 const closeTrial = document.querySelector(".close-trial");
 const openMenu = document.querySelector(".open-menu");
@@ -13,8 +13,10 @@ const incrementSpan = document.querySelector(".increment");
 const updateStoreButtons = document.querySelectorAll(".update-store");
 const progressElement = document.querySelector(".progress > div");
 
+//Toggle navElement
 const toggleNav = () => {
   navElement.classList.toggle("open");
+  alertBox.classList.remove("open");
   storeSetup.style.height = "6.2rem";
 
   const expanded = navElement.getAttribute("aria-expanded") === "true" || false;
@@ -50,14 +52,21 @@ document.addEventListener("click", (e) => {
   !navElement.contains(target) && navElement.classList.remove("open");
 });
 
+//Toggle alert notification
 bellIcon.addEventListener("click", () => {
   alertBox.classList.toggle("open");
+  navElement.classList.remove("open");
+
+  const expanded = alertBox.getAttribute("aria-expanded") === "true" || false;
+  alertBox.setAttribute("aria-expanded", !expanded);
 });
 
+//exit free trial notification
 closeTrial.addEventListener("click", () => {
   trialExtension.style.display = "none";
 });
 
+//Toggle main element
 const arrowUpUrl = "https://crushingit.tech/hackathon-assets/icon-arrow-up.svg";
 const arrowDownUrl =
   "https://crushingit.tech/hackathon-assets/icon-arrow-down.svg";
