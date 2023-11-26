@@ -338,39 +338,39 @@ main .store-setup .setup-progress .progress div {
   border-radius: 5px;
   transition: all 0.6s ease-in;
 }
-main .store-setup .one {
+main .store-setup .setup-guide {
   margin: 1rem 0.5rem;
   list-style: none;
 }
-main .store-setup .one .two {
+main .store-setup .setup-guide .two {
   padding: 0.5rem;
   border-radius: 10px;
 }
-main .store-setup .one .two .content-body .header {
+main .store-setup .setup-guide .two .content-body .header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
 }
-main .store-setup .one .two .content-body .header h2 {
+main .store-setup .setup-guide .two .content-body .header h2 {
   font-size: 0.813rem;
   font-weight: 500;
   color: #303030;
 }
-main .store-setup .one .two .content-body .header button {
+main .store-setup .setup-guide .two .content-body .header button {
   position: relative;
   border: none;
   background: none;
   outline: none;
 }
-main .store-setup .one .two .content-body .header button:hover .update-store-btn circle {
+main .store-setup .setup-guide .two .content-body .header button:hover .update-store-btn circle {
   stroke-dasharray: 0 0;
 }
-main .store-setup .one .two .content-body .header button:focus .update-store-btn circle {
+main .store-setup .setup-guide .two .content-body .header button:focus .update-store-btn circle {
   stroke-dasharray: 0 0;
   fill: #d9d9d9;
 }
-main .store-setup .one .two .content-body .header button .spinner {
+main .store-setup .setup-guide .two .content-body .header button .spinner {
   animation: rotate 0.8s infinite linear;
 }
 @keyframes rotate {
@@ -378,7 +378,7 @@ main .store-setup .one .two .content-body .header button .spinner {
     transform: rotate(1turn);
   }
 }
-main .store-setup .one .two .content-body .header button .checked {
+main .store-setup .setup-guide .two .content-body .header button .checked {
   animation: scale-out 0.3s linear;
 }
 @keyframes scale-out {
@@ -389,10 +389,10 @@ main .store-setup .one .two .content-body .header button .checked {
     transform: scale(1) rotate(360deg);
   }
 }
-main .store-setup .one .two .content-body .header button .hidden {
+main .store-setup .setup-guide .two .content-body .header button .hidden {
   display: none;
 }
-main .store-setup .one .two .content-body p {
+main .store-setup .setup-guide .two .content-body p {
   font-size: 0.813rem;
   padding: 1rem 0;
   margin-left: 1.7rem;
@@ -400,14 +400,14 @@ main .store-setup .one .two .content-body p {
   font-weight: 500;
   line-height: 19.6px;
 }
-main .store-setup .one .two .content-body p a {
+main .store-setup .setup-guide .two .content-body p a {
   font-size: 0.813rem;
   font-weight: 500;
   text-decoration: none;
   color: #005bd3;
   line-height: 18.2px;
 }
-main .store-setup .one .two .content-body .action-btn {
+main .store-setup .setup-guide .two .content-body .action-btn {
   margin-left: 1.7rem;
   padding: 0.375rem 0.75rem;
   background: #404040;
@@ -425,33 +425,33 @@ main .store-setup .one .two .content-body .action-btn {
   cursor: pointer;
   outline: none;
 }
-main .store-setup .one .two .content-body .action-btn:hover {
+main .store-setup .setup-guide .two .content-body .action-btn:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(0deg, #2a2a2a, #2a2a2a);
 }
-main .store-setup .one .two .content-body .action-btn:active {
+main .store-setup .setup-guide .two .content-body .action-btn:active {
   background: #2b2b2b;
   box-shadow: 0px 0px 0px 1.5px #333333;
   box-shadow: 0px 3px 0px 0px #000000 inset;
 }
-main .store-setup .one .two .content-body .action-btn:focus {
+main .store-setup .setup-guide .two .content-body .action-btn:focus {
   box-shadow: 0px 0px 0px 3px #005bd3;
 }
-main .store-setup .one .two .content-body .cl-menu {
+main .store-setup .setup-guide .two .content-body .cl-menu {
   display: none;
 }
-main .store-setup .one .two .content-body .show-menu {
+main .store-setup .setup-guide .two .content-body .show-menu {
   display: block;
 }
-main .store-setup .one .two .content-body .import {
+main .store-setup .setup-guide .two .content-body .import {
   font-size: 0.75rem;
   color: #323232;
   font-weight: 600;
   margin-left: 16px;
 }
-main .store-setup .one .two .content-image {
+main .store-setup .setup-guide .two .content-image {
   display: none;
 }
-main .store-setup .one .cl {
+main .store-setup .setup-guide .cl {
   background: #f3f3f3;
 }
 

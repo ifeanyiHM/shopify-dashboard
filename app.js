@@ -5,14 +5,15 @@ const alertBox = document.querySelector("#notif-menu");
 const trialExtension = document.querySelector(".trial-extension");
 const closeTrial = document.querySelector(".close-trial");
 const openMenu = document.querySelector("#open-menu");
-// const setupGuide = document.querySelector("#setup-guide");
 const angleToggleIcon = document.querySelector(".angle-toggle_icon");
 const storeSetup = document.querySelector(".store-setup");
 const headers = document.querySelectorAll(".header");
 const incrementSpan = document.querySelector(".increment");
 const updateStoreButtons = document.querySelectorAll(".update-store");
 const progressElement = document.querySelector(".progress > div");
+const updateStoreStatus = document.querySelector("#update-store-status");
 
+////////1️⃣ HEADER AND NAVIGATION//////////
 //Toggle navElement
 const toggleNav = () => {
   navElement.classList.toggle("open");
@@ -85,8 +86,9 @@ openMenu.addEventListener("click", () => {
   openMenu.setAttribute("aria-expanded", !expanded);
 });
 
-//Accordion features for each menu
+/////////2️⃣ MAIN /////////
 
+//Accordion features for each menu
 function toggleAccordion(header) {
   const parentLi = header.closest("li");
   const menu = parentLi.querySelector(".cl-menu");
@@ -108,9 +110,6 @@ headers.forEach((header) => {
     toggleAccordion(this);
   });
 });
-
-/////
-const updateStoreStatus = document.querySelector("#update-store-status");
 
 //Check button when clicked
 const checkButton = (button) => {
