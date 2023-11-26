@@ -285,7 +285,7 @@ main .store-setup {
   background: #fff;
   margin-top: 1rem;
   overflow: hidden;
-  height: 26.4rem;
+  height: 28.063rem;
   transition: all 0.3s ease-in;
 }
 main .store-setup h1 {
@@ -330,14 +330,13 @@ main .store-setup .setup-progress .progress {
   height: 4px;
   background: #e3e3e3;
   border-radius: 5px;
-  transition: all 0.5s ease-in;
 }
 main .store-setup .setup-progress .progress div {
   width: 0;
   background: #1a1a1a;
   height: 4px;
   border-radius: 5px;
-  transition: all 0.5s ease-in;
+  transition: all 0.6s ease-in;
 }
 main .store-setup .one {
   margin: 1rem 0.5rem;
@@ -372,7 +371,7 @@ main .store-setup .one .two .content-body .header button:focus .update-store-btn
   fill: #d9d9d9;
 }
 main .store-setup .one .two .content-body .header button .spinner {
-  animation: rotate 1s infinite linear;
+  animation: rotate 0.8s infinite linear;
 }
 @keyframes rotate {
   to {
@@ -394,10 +393,19 @@ main .store-setup .one .two .content-body .header button .hidden {
   display: none;
 }
 main .store-setup .one .two .content-body p {
-  font-size: 0.875rem;
+  font-size: 0.813rem;
   padding: 1rem 0;
   margin-left: 1.7rem;
   color: #616161;
+  font-weight: 500;
+  line-height: 19.6px;
+}
+main .store-setup .one .two .content-body p a {
+  font-size: 0.813rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #005bd3;
+  line-height: 18.2px;
 }
 main .store-setup .one .two .content-body .action-btn {
   margin-left: 1.7rem;
@@ -438,6 +446,7 @@ main .store-setup .one .two .content-body .import {
   font-size: 0.75rem;
   color: #323232;
   font-weight: 600;
+  margin-left: 16px;
 }
 main .store-setup .one .two .content-image {
   display: none;
@@ -512,6 +521,10 @@ main .store-setup .one .cl {
   main .store-setup .one .two {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+  }
+  main .store-setup .one .two .content-body {
+    width: 32.241rem;
   }
   main .store-setup .one .two .content-image {
     display: block;

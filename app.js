@@ -73,12 +73,12 @@ const arrowDownUrl =
   "https://crushingit.tech/hackathon-assets/icon-arrow-down.svg";
 
 openMenu.addEventListener("click", () => {
-  if (!storeSetup.style.height || storeSetup.style.height === "26.4rem") {
+  if (!storeSetup.style.height || storeSetup.style.height === "28.063rem") {
     angleToggleIcon.src = arrowUpUrl;
     storeSetup.style.height = "6.2rem";
   } else {
     angleToggleIcon.src = arrowDownUrl;
-    storeSetup.style.height = "26.4rem";
+    storeSetup.style.height = "28.063rem";
   }
 
   const expanded = openMenu.getAttribute("aria-expanded") === "true" || false;
@@ -109,8 +109,11 @@ headers.forEach((header) => {
   });
 });
 
+/////
 const updateStoreStatus = document.querySelector("#update-store-status");
-const handleButton = (button) => {
+
+//Check button when clicked
+const checkButton = (button) => {
   const updateStoreBtns = button
     .closest(".content-body")
     .querySelector(".update-store-btn");
@@ -121,32 +124,62 @@ const handleButton = (button) => {
   spinner.classList.remove("hidden");
   checked.classList.add("hidden");
 
-  updateStoreBtns.ariaLabel = "loading";
+  updateStoreBtns.ariaLabel = "please wait";
 
   setTimeout(() => {
     spinner.classList.add("hidden");
     checked.classList.remove("hidden");
 
     button.ariaLabel = button.ariaLabel.replace("as not done", "as done");
-  }, 800);
+  }, 600);
 
   updateStoreBtns.ariaLabel = "success";
 };
 
-//update progress bar width and increment
+//Uncheck button when clicked
+const unCheckButton = (button) => {
+  const updateStoreBtns = button
+    .closest(".content-body")
+    .querySelector(".update-store-btn");
+  const spinner = button.closest(".content-body").querySelector(".spinner");
+  const checked = button.closest(".content-body").querySelector(".checked");
+
+  checked.classList.add("hidden");
+  spinner.classList.remove("hidden");
+
+  updateStoreBtns.ariaLabel = "please wait";
+
+  setTimeout(() => {
+    spinner.classList.add("hidden");
+    updateStoreBtns.classList.remove("hidden");
+
+    button.ariaLabel = button.ariaLabel.replace("as done", "as not done");
+  }, 600);
+
+  updateStoreBtns.ariaLabel = "success";
+};
+
+//Toggle progress bar width and setup value when button clicked
 updateStoreButtons.forEach((button) => {
-  let progressWidth = 0;
   button.addEventListener("click", () => {
-    if (button.getAttribute("data-clicked") !== "true") {
-      let currentValue = parseInt(incrementSpan.textContent);
-      currentValue++;
-      incrementSpan.textContent = currentValue;
+    let currentValue = parseInt(incrementSpan.textContent);
+    let progressWidth = 0.9 * currentValue;
 
+    if (button.getAttribute("data-clicked") === "true") {
+      currentValue--;
       progressWidth = 0.9 * currentValue;
-      progressElement.style.width = `${progressWidth}rem`;
-
-      handleButton(button);
+      button.setAttribute("data-clicked", "false");
+      unCheckButton(button);
+    } else {
+      currentValue++;
+      progressWidth = 0.9 * currentValue;
       button.setAttribute("data-clicked", "true");
+      checkButton(button);
     }
+
+    setTimeout(() => {
+      incrementSpan.textContent = currentValue;
+    }, 500);
+    progressElement.style.width = `${progressWidth}rem`;
   });
 });
