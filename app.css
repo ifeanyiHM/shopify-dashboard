@@ -518,21 +518,21 @@ main .store-setup .setup-guide .cl {
   main .store-setup {
     border-radius: 8px;
   }
-  main .store-setup .one .two {
+  main .store-setup .setup-guide .two {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  main .store-setup .one .two .content-body {
+  main .store-setup .setup-guide .two .content-body {
     width: 32.241rem;
   }
-  main .store-setup .one .two .content-image {
+  main .store-setup .setup-guide .two .content-image {
     display: block;
   }
-  main .store-setup .one .two .cl-menu {
+  main .store-setup .setup-guide .two .cl-menu {
     display: none;
   }
-  main .store-setup .one .two .show-menu {
+  main .store-setup .setup-guide .two .show-menu {
     display: block;
   }
 }/*# sourceMappingURL=app.css.map */
