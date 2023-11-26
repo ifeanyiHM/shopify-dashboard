@@ -54,8 +54,7 @@ header .search input {
   border: 1px solid #616161;
   background: #303030;
   border-radius: 8px;
-  transition: all 0.3s;
-  outline: none;
+  transition: all 0.3s ease-in;
   color: #b5b5b5;
 }
 header .search input::-moz-placeholder {
@@ -65,10 +64,10 @@ header .search input::placeholder {
   color: #b5b5b5;
 }
 header .search input:hover, header .search input:active {
-  border-color: #e1e1e1;
+  outline-color: #e1e1e1;
 }
 header .search input:focus {
-  border: 1px solid #fff;
+  outline: 1px solid #fff;
 }
 header .notification {
   display: flex;
@@ -123,7 +122,7 @@ header .notification .notf p {
   background: #f1f1f1;
   margin-top: 1rem;
 }
-header .notification .open {
+header .notification .show {
   display: block;
 }
 header .notification .user {
@@ -174,7 +173,7 @@ header nav ul li a {
   border-radius: 8px;
   margin: 0 0.4rem;
   padding: 0.5rem;
-  transition: 0.3s;
+  transition: all 0.3s ease-in;
   font-weight: 400;
   border: 2px solid transparent;
   text-decoration: none;
@@ -271,7 +270,7 @@ main .trial-extension button {
   outline: none;
   padding: 0.3rem;
   border-radius: 5px;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in;
   cursor: pointer;
 }
 main .trial-extension button img {
@@ -287,7 +286,7 @@ main .store-setup {
   margin-top: 1rem;
   overflow: hidden;
   height: 26.4rem;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in;
 }
 main .store-setup h1 {
   font-size: 0.875rem;
@@ -331,19 +330,18 @@ main .store-setup .setup-progress .progress {
   height: 4px;
   background: #e3e3e3;
   border-radius: 5px;
-  transition: all 0.5s;
+  transition: all 0.5s ease-in;
 }
 main .store-setup .setup-progress .progress div {
   width: 0;
   background: #1a1a1a;
   height: 4px;
   border-radius: 5px;
-  transition: all 0.5s;
+  transition: all 0.5s ease-in;
 }
 main .store-setup .one {
   margin: 1rem 0.5rem;
   list-style: none;
-  transition: all 1s;
 }
 main .store-setup .one .two {
   padding: 0.5rem;
@@ -366,37 +364,34 @@ main .store-setup .one .two .content-body .header button {
   background: none;
   outline: none;
 }
-main .store-setup .one .two .content-body .header button .divv {
-  border: 2px dashed #8a8a8a;
-  border-radius: 50%;
-  width: 1.25rem;
-  height: 1.25rem;
+main .store-setup .one .two .content-body .header button:hover .update-store-btn circle {
+  stroke-dasharray: 0 0;
 }
-main .store-setup .one .two .content-body .header button img {
-  width: 1.5rem;
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  opacity: 0;
-  transition: all 0.4s 0.5s;
+main .store-setup .one .two .content-body .header button:focus .update-store-btn circle {
+  stroke-dasharray: 0 0;
+  fill: #d9d9d9;
 }
-main .store-setup .one .two .content-body .header button:hover .divv, main .store-setup .one .two .content-body .header button:active .divv, main .store-setup .one .two .content-body .header button:focus .divv {
-  border-style: solid;
-}
-main .store-setup .one .two .content-body .header .btn-checked img {
-  opacity: 1;
-  transition: all 0.4s 0.5s;
-}
-main .store-setup .one .two .content-body .header .btn-checked .divv {
-  border-right: 0;
-  border-style: solid;
-  border-color: #303030;
-  animation: rotate 1s 2 linear;
+main .store-setup .one .two .content-body .header button .spinner {
+  animation: rotate 1s infinite linear;
 }
 @keyframes rotate {
   to {
     transform: rotate(1turn);
   }
+}
+main .store-setup .one .two .content-body .header button .checked {
+  animation: scale-out 0.3s linear;
+}
+@keyframes scale-out {
+  from {
+    transform: scale(0) rotate(270deg);
+  }
+  to {
+    transform: scale(1) rotate(360deg);
+  }
+}
+main .store-setup .one .two .content-body .header button .hidden {
+  display: none;
 }
 main .store-setup .one .two .content-body p {
   font-size: 0.875rem;

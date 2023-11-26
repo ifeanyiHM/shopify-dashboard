@@ -46,8 +46,10 @@
           aria-haspopup="true"
           aria-expanded="false"
           aria-controls="notif-menu"
+          aria-label="notification"
         >
           <img
+            aria-hidden="true"
             src="https://crushingit.tech/hackathon-assets/icon-bell.svg"
             alt="notification"
           />
@@ -79,16 +81,17 @@
           aria-haspopup="true"
           aria-expanded="false"
           aria-controls="navigation-menu"
+          aria-label="navigate users options"
         >
-          <span>Davii Collections</span>
-          <span>DC</span>
+          <span arial-hidden="true">Davii Collections</span>
+          <span arial-hidden="true">DC</span>
         </button>
       </div>
 
       <nav role="navigation" id="navigation-menu" aria-labelledby="toggle-menu">
         <ul>
           <li class="user-p">
-            <a href="#">
+            <a href="#" role="user-option">
               <span class="user-SP">
                 <span>DC</span>
                 <span>Davii collections</span>
@@ -96,8 +99,8 @@
               &#10003;
             </a>
           </li>
-          <li class="store">
-            <a href="#">
+          <li role="class" ="store">
+            <a href="#" role="user-option">
               <img
                 src="https://crushingit.tech/hackathon-assets/icon-store.svg"
                 alt="store"
@@ -107,21 +110,21 @@
           </li>
           <li class="center">
             <ul>
-              <li><a href="#">Help Center</a></li>
-              <li><a href="#">Changelog</a></li>
-              <li><a href="#">Community forums</a></li>
-              <li><a href="#">Hire a Shopify Partner</a></li>
-              <li><a href="#">Keyboard shortcuts</a></li>
+              <li><a href="#" role="user-option">Help Center</a></li>
+              <li><a href="#" role="user-option">Changelog</a></li>
+              <li><a href="#" role="user-option">Community forums</a></li>
+              <li><a href="#" role="user-option">Hire a Shopify Partner</a></li>
+              <li><a href="#" role="user-option">Keyboard shortcuts</a></li>
             </ul>
           </li>
           <li>
-            <a href="#">
+            <a href="#" role="user-option">
               <span>David Micheal</span><br />
               <span>davidmicheal@gmail.com</span>
             </a>
           </li>
-          <li><a href="#">Manage account</a></li>
-          <li><a href="#">Log out</a></li>
+          <li><a href="#" role="user-option">Manage account</a></li>
+          <li><a href="#" role="user-option">Log out</a></li>
         </ul>
       </nav>
     </header>
@@ -141,8 +144,16 @@
 
       <section class="store-setup">
         <h1>Setup guide</h1>
-        <button class="open-menu">
+        <button
+          class="open-menu"
+          id="open-menu"
+          aria-haspopup="true"
+          aria-expanded="true"
+          aria-controls="setup-guide"
+          aria-label="collapse setup guide"
+        >
           <img
+            aria-hidden="true"
             class="angle-toggle_icon"
             src="https://crushingit.tech/hackathon-assets/icon-arrow-down.svg"
             alt="angle toggle icon"
@@ -159,16 +170,87 @@
             <div></div>
           </div>
         </div>
-        <ul class="one">
+        <span id="update-store-status" aria-live="polite"></span>
+        <ul
+          class="one"
+          role="menu"
+          id="setup-guide"
+          aria-labelledby="open-menu"
+        >
           <li class="two cl">
             <div class="content-body">
               <div class="header">
-                <button class="update-store">
-                  <div class="divv"></div>
-                  <img
-                    src="https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg"
-                    alt="radio button clicked"
-                  />
+                <button
+                  class="update-store"
+                  role="menu-item"
+                  id="update-store1"
+                  aria-label="Mark customize your online store as done"
+                >
+                  <svg
+                    class="update-store-btn"
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="#8A8A8A"
+                      stroke-width="2.08333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-dasharray="5 5"
+                    />
+                  </svg>
+
+                  <svg
+                    class="spinner hidden"
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                      stroke="#1C181D"
+                      stroke-width="2.08333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <svg
+                    class="checked hidden"
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="11.9996"
+                      cy="12"
+                      r="10"
+                      fill="#1C181D"
+                      stroke="#1C181D"
+                      stroke-width="2.08333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M16.8162 8.64149C17.0603 8.88557 17.0603 9.2813 16.8162 9.52538L11.3995 14.942C11.1555 15.1861 10.7597 15.1861 10.5157 14.942L7.80733 12.2337C7.56325 11.9896 7.56325 11.5939 7.80733 11.3498C8.0514 11.1057 8.44713 11.1057 8.69121 11.3498L10.9576 13.6162L15.9323 8.64149C16.1764 8.39742 16.5721 8.39742 16.8162 8.64149Z"
+                      fill="white"
+                    />
+                  </svg>
                 </button>
                 <h2>Customize your online store</h2>
               </div>
@@ -196,12 +278,77 @@
           <li class="two">
             <div class="content-body">
               <div class="header">
-                <button class="update-store">
-                  <div class="divv"></div>
-                  <img
-                    src="https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg"
-                    alt="radio button clicked"
-                  />
+                <button
+                  class="update-store"
+                  role="menu-item"
+                  id="update-store2"
+                  aria-label="Mark add your first product as done"
+                >
+                  <svg
+                    class="update-store-btn"
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="#8A8A8A"
+                      stroke-width="2.08333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-dasharray="5 5"
+                    />
+                  </svg>
+
+                  <svg
+                    class="spinner hidden"
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                      stroke="#1C181D"
+                      stroke-width="2.08333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <svg
+                    class="checked hidden"
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="11.9996"
+                      cy="12"
+                      r="10"
+                      fill="#1C181D"
+                      stroke="#1C181D"
+                      stroke-width="2.08333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M16.8162 8.64149C17.0603 8.88557 17.0603 9.2813 16.8162 9.52538L11.3995 14.942C11.1555 15.1861 10.7597 15.1861 10.5157 14.942L7.80733 12.2337C7.56325 11.9896 7.56325 11.5939 7.80733 11.3498C8.0514 11.1057 8.44713 11.1057 8.69121 11.3498L10.9576 13.6162L15.9323 8.64149C16.1764 8.39742 16.5721 8.39742 16.8162 8.64149Z"
+                      fill="white"
+                    />
+                  </svg>
                 </button>
                 <h2>Add your first product</h2>
               </div>
@@ -230,12 +377,77 @@
           <li class="two">
             <div class="content-body">
               <div class="header">
-                <button class="update-store">
-                  <div class="divv"></div>
-                  <img
-                    src="https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg"
-                    alt="radio button clicked"
-                  />
+                <button
+                  class="update-store"
+                  role="menu-item"
+                  id="update-store3"
+                  aria-label="Mark add a custom domain as done"
+                >
+                  <svg
+                    class="update-store-btn"
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="#8A8A8A"
+                      stroke-width="2.08333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-dasharray="5 5"
+                    />
+                  </svg>
+
+                  <svg
+                    class="spinner hidden"
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                      stroke="#1C181D"
+                      stroke-width="2.08333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <svg
+                    class="checked hidden"
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="11.9996"
+                      cy="12"
+                      r="10"
+                      fill="#1C181D"
+                      stroke="#1C181D"
+                      stroke-width="2.08333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M16.8162 8.64149C17.0603 8.88557 17.0603 9.2813 16.8162 9.52538L11.3995 14.942C11.1555 15.1861 10.7597 15.1861 10.5157 14.942L7.80733 12.2337C7.56325 11.9896 7.56325 11.5939 7.80733 11.3498C8.0514 11.1057 8.44713 11.1057 8.69121 11.3498L10.9576 13.6162L15.9323 8.64149C16.1764 8.39742 16.5721 8.39742 16.8162 8.64149Z"
+                      fill="white"
+                    />
+                  </svg>
                 </button>
                 <h2>Add a custom domain</h2>
               </div>
@@ -262,12 +474,77 @@
           <li class="two">
             <div class="content-body">
               <div class="header">
-                <button class="update-store">
-                  <div class="divv"></div>
-                  <img
-                    src="https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg"
-                    alt="radio button clicked"
-                  />
+                <button
+                  class="update-store"
+                  role="menu-item"
+                  id="update-store4"
+                  aria-label="Mark name your store as done"
+                >
+                  <svg
+                    class="update-store-btn"
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="#8A8A8A"
+                      stroke-width="2.08333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-dasharray="5 5"
+                    />
+                  </svg>
+
+                  <svg
+                    class="spinner hidden"
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                      stroke="#1C181D"
+                      stroke-width="2.08333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <svg
+                    class="checked hidden"
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="11.9996"
+                      cy="12"
+                      r="10"
+                      fill="#1C181D"
+                      stroke="#1C181D"
+                      stroke-width="2.08333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M16.8162 8.64149C17.0603 8.88557 17.0603 9.2813 16.8162 9.52538L11.3995 14.942C11.1555 15.1861 10.7597 15.1861 10.5157 14.942L7.80733 12.2337C7.56325 11.9896 7.56325 11.5939 7.80733 11.3498C8.0514 11.1057 8.44713 11.1057 8.69121 11.3498L10.9576 13.6162L15.9323 8.64149C16.1764 8.39742 16.5721 8.39742 16.8162 8.64149Z"
+                      fill="white"
+                    />
+                  </svg>
                 </button>
                 <h2>Name your store</h2>
               </div>
@@ -295,12 +572,77 @@
           <li class="two">
             <div class="content-body">
               <div class="header">
-                <button class="update-store">
-                  <div class="divv"></div>
-                  <img
-                    src="https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg"
-                    alt="radio button clicked"
-                  />
+                <button
+                  class="update-store"
+                  role="menu-item"
+                  id="update-store5"
+                  aria-label="Mark setup a payment provider as done"
+                >
+                  <svg
+                    class="update-store-btn"
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="#8A8A8A"
+                      stroke-width="2.08333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-dasharray="5 5"
+                    />
+                  </svg>
+
+                  <svg
+                    class="spinner hidden"
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                      stroke="#1C181D"
+                      stroke-width="2.08333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <svg
+                    class="checked hidden"
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="11.9996"
+                      cy="12"
+                      r="10"
+                      fill="#1C181D"
+                      stroke="#1C181D"
+                      stroke-width="2.08333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M16.8162 8.64149C17.0603 8.88557 17.0603 9.2813 16.8162 9.52538L11.3995 14.942C11.1555 15.1861 10.7597 15.1861 10.5157 14.942L7.80733 12.2337C7.56325 11.9896 7.56325 11.5939 7.80733 11.3498C8.0514 11.1057 8.44713 11.1057 8.69121 11.3498L10.9576 13.6162L15.9323 8.64149C16.1764 8.39742 16.5721 8.39742 16.8162 8.64149Z"
+                      fill="white"
+                    />
+                  </svg>
                 </button>
                 <h2>Setup a payment provider</h2>
               </div>

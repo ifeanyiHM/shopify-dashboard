@@ -58,8 +58,7 @@ header {
       border: 1px solid #616161;
       background: #303030;
       border-radius: 8px;
-      transition: all 0.3s;
-      outline: none;
+      transition: all 0.3s ease-in;
       color: #b5b5b5;
 
       &::placeholder {
@@ -68,10 +67,10 @@ header {
 
       &:hover,
       &:active {
-        border-color: #e1e1e1;
+        outline-color: #e1e1e1;
       }
       &:focus {
-        border: 1px solid #fff;
+        outline: 1px solid #fff;
       }
     }
   }
@@ -141,7 +140,7 @@ header {
       }
     }
 
-    .open {
+    .show {
       display: block;
     }
 
@@ -199,7 +198,7 @@ header {
         border-radius: 8px;
         margin: 0 0.4rem;
         padding: 0.5rem;
-        transition: 0.3s;
+        transition: all 0.3s ease-in;
         font-weight: 400;
         border: 2px solid transparent;
         text-decoration: none;
@@ -316,7 +315,7 @@ main {
       outline: none;
       padding: 0.3rem;
       border-radius: 5px;
-      transition: all 0.3s;
+      transition: all 0.3s ease-in;
       cursor: pointer;
 
       img {
@@ -339,7 +338,7 @@ main {
     margin-top: 1rem;
     overflow: hidden;
     height: 26.4rem;
-    transition: all 0.3s;
+    transition: all 0.3s ease-in;
 
     h1 {
       font-size: 0.875rem;
@@ -392,14 +391,14 @@ main {
         height: 4px;
         background: #e3e3e3;
         border-radius: 5px;
-        transition: all 0.5s;
+        transition: all 0.5s ease-in;
 
         div {
           width: 0;
           background: #1a1a1a;
           height: 4px;
           border-radius: 5px;
-          transition: all 0.5s;
+          transition: all 0.5s ease-in;
         }
       }
     }
@@ -407,7 +406,6 @@ main {
     .one {
       margin: 1rem 0.5rem;
       list-style: none;
-      transition: all 1s;
 
       .two {
         padding: 0.5rem;
@@ -432,46 +430,39 @@ main {
               background: none;
               outline: none;
 
-              .divv {
-                border: 2px dashed #8a8a8a;
-                border-radius: 50%;
-                width: 1.25rem;
-                height: 1.25rem;
+              &:hover .update-store-btn circle {
+                stroke-dasharray: 0 0;
+              }
+              &:focus .update-store-btn circle {
+                stroke-dasharray: 0 0;
+                fill: #d9d9d9;
               }
 
-              img {
-                width: 1.5rem;
-                position: absolute;
-                top: -2px;
-                left: -2px;
-                opacity: 0;
-                transition: all 0.4s 0.5s;
-              }
-
-              &:hover .divv,
-              &:active .divv,
-              &:focus .divv {
-                border-style: solid;
-              }
-            }
-
-            .btn-checked {
-              img {
-                opacity: 1;
-                transition: all 0.4s 0.5s;
-              }
-
-              .divv {
-                border-right: 0;
-                border-style: solid;
-                border-color: #303030;
-                animation: rotate 1s 2 linear;
+              .spinner {
+                animation: rotate 1s infinite linear;
               }
 
               @keyframes rotate {
                 to {
                   transform: rotate(1turn);
                 }
+              }
+
+              .checked {
+                animation: scale-out 0.3s linear;
+              }
+
+              @keyframes scale-out {
+                from {
+                  transform: scale(0) rotate(270deg);
+                }
+                to {
+                  transform: scale(1) rotate(360deg);
+                }
+              }
+
+              .hidden {
+                display: none;
               }
             }
           }
