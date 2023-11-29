@@ -68,25 +68,33 @@ closeTrial.addEventListener("click", () => {
   trialExtension.style.display = "none";
 });
 
+/////////2️⃣ MAIN /////////
+
 //Toggle main element
+
 const arrowUpUrl = "https://crushingit.tech/hackathon-assets/icon-arrow-up.svg";
 const arrowDownUrl =
   "https://crushingit.tech/hackathon-assets/icon-arrow-down.svg";
 
+const mediaQuery = window.matchMedia("(min-width: 900px)");
+const collapsedMatchQuery = mediaQuery.matches ? "6.2rem" : "6.75rem";
+let expandedmatchQuery = mediaQuery.matches ? "27.438rem" : "28.563rem";
+
 openMenu.addEventListener("click", () => {
-  if (!storeSetup.style.height || storeSetup.style.height === "28.063rem") {
+  if (
+    !storeSetup.style.height ||
+    storeSetup.style.height === expandedmatchQuery
+  ) {
     angleToggleIcon.src = arrowUpUrl;
-    storeSetup.style.height = "6.2rem";
+    storeSetup.style.height = collapsedMatchQuery;
   } else {
     angleToggleIcon.src = arrowDownUrl;
-    storeSetup.style.height = "28.063rem";
+    storeSetup.style.height = expandedmatchQuery;
   }
 
   const expanded = openMenu.getAttribute("aria-expanded") === "true" || false;
   openMenu.setAttribute("aria-expanded", !expanded);
 });
-
-/////////2️⃣ MAIN /////////
 
 //Accordion features for each menu
 function toggleAccordion(header) {
@@ -103,6 +111,18 @@ function toggleAccordion(header) {
   menu.classList.toggle("show-menu");
   parentLi.classList.toggle("cl");
   contentImage.classList.toggle("show-menu");
+
+  const isHeaderHeight = header.classList.contains("header-height");
+  expandedmatchQuery = isHeaderHeight
+    ? mediaQuery.matches
+      ? "28.563rem"
+      : "30.813rem"
+    : mediaQuery.matches
+    ? "27.438rem"
+    : "28.563rem";
+
+  storeSetup.style.height = expandedmatchQuery;
+  console.log(expandedmatchQuery);
 }
 
 headers.forEach((header) => {

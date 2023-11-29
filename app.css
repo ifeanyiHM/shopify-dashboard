@@ -127,7 +127,6 @@ header .notification .show {
 }
 header .notification .user {
   cursor: pointer;
-  border: none;
   border-radius: 6px;
   font-size: 0.8rem;
   font-weight: 500;
@@ -263,8 +262,8 @@ main .trial-extension a:focus {
 }
 main .trial-extension button {
   position: absolute;
-  right: 1rem;
   top: 0.7rem;
+  right: 0.4rem;
   background: none;
   border: none;
   outline: none;
@@ -285,7 +284,7 @@ main .store-setup {
   background: #fff;
   margin-top: 1rem;
   overflow: hidden;
-  height: 28.063rem;
+  height: 28.563rem;
   transition: all 0.3s ease-in;
 }
 main .store-setup h1 {
@@ -320,7 +319,7 @@ main .store-setup .setup-progress {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0 1rem;
+  padding: 0 1rem 1rem 1rem;
 }
 main .store-setup .setup-progress .details {
   font-size: 0.75rem;
@@ -339,7 +338,7 @@ main .store-setup .setup-progress .progress div {
   transition: all 0.6s ease-in;
 }
 main .store-setup .setup-guide {
-  margin: 1rem 0.5rem;
+  margin: 1rem 0.5rem 0 0.5rem;
   list-style: none;
 }
 main .store-setup .setup-guide .two {
@@ -515,8 +514,12 @@ main .store-setup .setup-guide .cl {
   main .trial-extension a {
     margin-right: 3rem;
   }
+  main .trial-extension button {
+    right: 1rem;
+  }
   main .store-setup {
     border-radius: 8px;
+    height: 27.438rem;
   }
   main .store-setup .setup-guide .two {
     display: flex;

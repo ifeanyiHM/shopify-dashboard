@@ -146,7 +146,7 @@ header {
 
     .user {
       cursor: pointer;
-      border: none;
+
       border-radius: 6px;
       font-size: 0.8rem;
       font-weight: 500;
@@ -308,8 +308,8 @@ main {
 
     button {
       position: absolute;
-      right: 1rem;
       top: 0.7rem;
+      right: 0.4rem;
       background: none;
       border: none;
       outline: none;
@@ -337,7 +337,7 @@ main {
     background: #fff;
     margin-top: 1rem;
     overflow: hidden;
-    height: 28.063rem;
+    height: 28.563rem;
     transition: all 0.3s ease-in;
 
     h1 {
@@ -380,7 +380,7 @@ main {
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0 1rem;
+      padding: 0 1rem 1rem 1rem;
 
       .details {
         font-size: 0.75rem;
@@ -403,7 +403,7 @@ main {
     }
 
     .setup-guide {
-      margin: 1rem 0.5rem;
+      margin: 1rem 0.5rem 0 0.5rem;
       list-style: none;
 
       .two {
@@ -622,10 +622,15 @@ main {
       a {
         margin-right: 3rem;
       }
+
+      button {
+        right: 1rem;
+      }
     }
 
     .store-setup {
       border-radius: 8px;
+      height: 27.438rem;
 
       .setup-guide {
         .two {
